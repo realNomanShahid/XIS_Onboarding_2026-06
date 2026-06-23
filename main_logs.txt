@@ -1,0 +1,32 @@
+Day 1 logs start here
+Setting GitHub repo
+
+
+Day 2
+Data annotation
+
+Day 3
+Data annotation
+
+Day 4
+Task: Day 3 — RF-DETR Model Training
+  Config: RFDETRBase, epochs=30, batch_size=1, grad_accum_steps=2, lr=1e-4
+  Dataset: {DATASET_PATH} (train/valid/test COCO format)
+  Result: See training_config.json for full mAP@50, mAP@50:95, loss values
+  Observations: Used pretrained COCO checkpoint (transfer learning) due to limited
+  dataset size — training from scratch was not viable. Debug run (2 epochs) completed
+  successfully before full 25-epoch run.
+
+
+Day 5
+
+Task: ConvNeXt Image Classification
+
+Dataset: Oxford 102 Flowers (train/valid/test split)
+Model: Pretrained ConvNeXt
+Applied image preprocessing and augmentation
+Trained and validated the classification model
+Generated confusion matrix and classification report
+Analysed misclassified classes and model performance
+Result: ~96% validation accuracy, Macro F1 ≈ 0.94
+Checkpoint saved for further evaluation
