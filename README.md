@@ -10,6 +10,7 @@ The repository is organized by task, with each task containing its own scripts, 
 
 ## Repository Structure
 
+```
 project/
 │
 ├── data_segmentation/
@@ -26,8 +27,7 @@ project/
 │
 ├── main_logs.txt
 └── README.md
-
----
+```
 
 ## Tasks Completed
 
