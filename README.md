@@ -8,6 +8,7 @@ This repository contains the work completed during the AI internship onboarding 
 
 ##  Repository Structure
 
+```
 project/
 │
 ├── data_segmentation/
@@ -24,8 +25,7 @@ project/
 │
 ├── main_logs.txt
 └── README.md
-
----
+```
 
 ## ✅ Tasks Completed
 
@@ -56,4 +56,8 @@ All daily progress and experiments are recorded in `main_logs.txt`.
 
 ## 📌 Notes
 
+day-6
 This repository is part of an AI internship onboarding process and demonstrates implementation and evaluation of computer vision workflows.
+=======
+This repository is part of the onboarding process and documents the implementation, experimentation, and evaluation of different computer vision tasks.
+main
