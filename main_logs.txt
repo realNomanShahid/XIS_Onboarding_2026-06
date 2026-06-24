@@ -30,3 +30,17 @@ Generated confusion matrix and classification report
 Analysed misclassified classes and model performance
 Result: ~96% validation accuracy, Macro F1 ≈ 0.94
 Checkpoint saved for further evaluation
+
+
+Day 5
+
+Task: ConvNeXt V2 Model Conversion
+
+Exported trained ConvNeXt V2 model from PyTorch (.pth) to ONNX format.
+Successfully generated and validated convnext.onnx.
+Studied ONNX Runtime and TensorRT deployment workflow.
+TensorRT conversion and benchmarking could not be performed due to lack of NVIDIA GPU support.
+
+Output:
+
+convnext.onnx
