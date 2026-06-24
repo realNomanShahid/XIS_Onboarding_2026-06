@@ -1,27 +1,25 @@
-# AI Internship Onboarding Project
+#  AI Internship Onboarding Project
 
-## Overview
+##  Overview
 
-This repository contains the tasks completed during the AI internship onboarding period. The project covers data annotation, object detection, image classification, and inference workflows using deep learning models.
-
-The repository is organized by task, with each task containing its own scripts, datasets, outputs, and documentation.
+This repository contains the work completed during the AI internship onboarding period. It includes computer vision tasks such as data annotation, object detection, image classification, and inference pipelines using deep learning models. The project is structured into separate modules with code, models, outputs, and documentation.
 
 ---
 
-## Repository Structure
+##  Repository Structure
 
 project/
 │
 ├── data_segmentation/
 │   ├── inference.py
-│   ├── outputs/
 │   ├── models/
+│   ├── outputs/
 │   └── README.md
 │
 ├── data_classification/
 │   ├── inference.py
-│   ├── outputs/
 │   ├── models/
+│   ├── outputs/
 │   └── README.md
 │
 ├── main_logs.txt
@@ -29,60 +27,33 @@ project/
 
 ---
 
-## Tasks Completed
+## ✅ Tasks Completed
 
-### Day 1
-- Repository setup
-- GitHub initialization
-
-### Day 2–3
-- Data annotation
-- Dataset preparation
-
-### Day 4
-- RF-DETR object detection training
-- Transfer learning using pretrained COCO weights
-- Dataset in COCO format
-- Model evaluation
-
-### Day 5
-- ConvNeXt image classification
-- Oxford 102 Flowers dataset
-- Data preprocessing and augmentation
-- Model training and evaluation
-- Confusion matrix and classification report generation
+Day 1 – Setup: Repository initialization and GitHub configuration.  
+Day 2–3 – Data Preparation: Data annotation, cleaning, and dataset preparation.  
+Day 4 – Object Detection: RF-DETR training, COCO-format dataset, transfer learning, and evaluation.  
+Day 5 – Image Classification: ConvNeXt model on Oxford 102 Flowers dataset with preprocessing, training, evaluation, confusion matrix, and classification report.
 
 ---
 
-## Technologies Used
+## 🧠 Technologies Used
 
-- Python
-- PyTorch
-- RF-DETR
-- ConvNeXt
-- OpenCV
-- NumPy
-- Matplotlib
+Python, PyTorch, RF-DETR, ConvNeXt, OpenCV, NumPy, Matplotlib
 
 ---
 
-## Outputs
+## 📊 Outputs
 
-Each module contains:
-
-- trained model
-- inference script
-- prediction outputs
-- evaluation results
+Each module contains trained models, inference scripts, prediction results, and evaluation metrics/visualizations.
 
 ---
 
-## Project Logs
+## 📝 Project Logs
 
-Daily development progress is recorded in **main_logs.txt**.
+All daily progress and experiments are recorded in `main_logs.txt`.
 
 ---
 
-## Notes
+## 📌 Notes
 
-This repository is part of the onboarding process and documents the implementation, experimentation, and evaluation of different computer vision tasks.
+This repository is part of an AI internship onboarding process and demonstrates implementation and evaluation of computer vision workflows.
