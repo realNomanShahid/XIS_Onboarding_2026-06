@@ -32,7 +32,7 @@ Result: ~96% validation accuracy, Macro F1 ≈ 0.94
 Checkpoint saved for further evaluation
 
 
-Day 5
+Day 6
 
 Task: ConvNeXt V2 Model Conversion
 
