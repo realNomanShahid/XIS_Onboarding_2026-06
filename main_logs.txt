@@ -49,7 +49,7 @@ convnext.onnx
 
 
 
-Day 6 – Segmentation Inference Pipeline
+Day 7 – Segmentation Inference Pipeline
 
 • Designed a modular ONNX-based segmentation pipeline.
 • Implemented image preprocessing, ONNX inference, and postprocessing modules.
