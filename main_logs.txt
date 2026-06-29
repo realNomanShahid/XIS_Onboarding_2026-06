@@ -46,9 +46,6 @@ Output:
 convnext.onnx
 
 
-
-
-
 Day 7 – Segmentation Inference Pipeline
 
 • Designed a modular ONNX-based segmentation pipeline.
@@ -60,3 +57,4 @@ Day 7 – Segmentation Inference Pipeline
 
 output:
 inference pipeline
+main
