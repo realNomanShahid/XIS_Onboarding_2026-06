@@ -44,3 +44,19 @@ TensorRT conversion and benchmarking could not be performed due to lack of NVIDI
 Output:
 
 convnext.onnx
+
+
+
+
+
+Day 6 – Segmentation Inference Pipeline
+
+• Designed a modular ONNX-based segmentation pipeline.
+• Implemented image preprocessing, ONNX inference, and postprocessing modules.
+• Converted ONNX outputs into bounding boxes, class labels, confidence scores, and segmentation masks.
+• Integrated class mapping using num_to_class.json.
+• Developed visualization to overlay masks, draw bounding boxes, and save prediction results.
+• Added automatic logging, metrics generation, and organized project structure for maintainability.
+
+output:
+inference pipeline
