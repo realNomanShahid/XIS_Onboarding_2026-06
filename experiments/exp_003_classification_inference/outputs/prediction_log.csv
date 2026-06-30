@@ -1,0 +1,5 @@
+Timestamp,Image,Predicted Class,Confidence (%)
+29/06/2026 18:00,ing1.jpg,1,99.88
+29/06/2026 18:03,ing2.jpg,32,99.68
+29/06/2026 20:21,img4.png,3,87.98
+29/06/2026 20:22,img3.png,43,99.87

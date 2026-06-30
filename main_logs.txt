@@ -58,3 +58,15 @@ Day 7 – Segmentation Inference Pipeline
 output:
 inference pipeline
 main
+
+
+Day 8
+Implemented GPU inference pipeline using Google Colab (Tesla T4). Compared CPU ONNX Runtime, ONNX Runtime CUDA, and TensorRT FP16. Moved preprocessing to GPU (resize and normalization), built a TensorRT engine from the ONNX model, and benchmarked the complete pipeline.
+
+Results:
+- CPU: 937.98 ms (1.07 FPS)
+- ONNX CUDA: 31.32 ms (31.93 FPS)
+- TensorRT FP16: 27.93 ms (35.80 FPS)
+
+output
+Overall speedup from CPU to TensorRT: ~33.6×.
