@@ -1,6 +1,6 @@
 # Day 9 — IP Camera Streaming into GPU Inference Pipeline
 
-## Task
+## Task 
 
 Replace the industrial camera feed with a consumer IP camera (phone streaming
 over RTSP), add automatic reconnection handling so the pipeline survives
