@@ -20,28 +20,7 @@ Run TensorRT segmentation on a GPU (Google Colab) and send results back to the l
 
 ---
 
-## Project Structure
 
-```
-Client (Windows)
-│
-├── runner.py
-├── performance_metrics.txt
-├── main_logs.txt
-├── issues_and_fixes.txt
-└── images/
-```
-
-```
-Server (Google Colab)
-│
-├── FastAPI
-├── TensorRT Engine
-├── model.engine
-└── inference.ipynb
-```
-
----
 
 ## Output
 
@@ -94,15 +73,8 @@ This benchmark measures only TensorRT execution on the GPU.
 ## Why GenTL and Harvester were not used
 
 - No physical industrial camera was available.
-- The project requirement was to validate the remote inference pipeline.
-- Images were read from a local folder instead of a camera.
+- The task requirement was to validate the remote inference pipeline.
 
----
-
-## Why OpenCV was used
-
-- Easy to test the complete pipeline without camera hardware.
-- Same inference pipeline can later receive frames from Harvester without changing the TensorRT server.
 
 ---
 
