@@ -36,19 +36,23 @@ from Day 8.
 
 ## Comparison vs Industrial Camera (Day 8)
 
-GPU inference time is consistent at ~50–420 ms, same as Day 8
-This confirms the model and server are working normally
-The camera source is not affecting inference performance
-Main delay comes from network overhead (~2.9 s average, up to 11.3 s spikes)
-Latency is caused by:
-IP camera HTTP/MJPEG streaming delay
-ngrok free-tier tunnel limitations
-The inference pipeline itself is not the bottleneck
-Conclusion (Day 9):
-IP cameras are cheaper and easier to deploy
-But they have much higher and less stable latency
-Compared to a direct industrial camera + local GPU setup
-System stability:
-No stream drops or reconnects occurred during testing
-Reconnection logic is implemented and verified (tested earlier via forced failures)
-It was not triggered during this benchmark run
+- GPU inference time is consistent at **~50–420 ms**, same as Day 8  
+- This confirms the model and server are working normally  
+- The camera source is not affecting inference performance  
+
+- Main delay comes from network overhead (~2.9 s average, up to 11.3 s spikes)  
+- Latency is caused by:
+  - IP camera HTTP/MJPEG streaming delay  
+  - ngrok free-tier tunnel limitations  
+
+- The inference pipeline itself is not the bottleneck  
+
+- Conclusion (Day 9):
+  - IP cameras are cheaper and easier to deploy  
+  - But they have much higher and less stable latency  
+  - Compared to a direct industrial camera + local GPU setup  
+
+- System stability:
+  - No stream drops or reconnects occurred during testing  
+  - Reconnection logic is implemented and verified (tested earlier via forced failures)  
+  - It was not triggered during this benchmark run  
