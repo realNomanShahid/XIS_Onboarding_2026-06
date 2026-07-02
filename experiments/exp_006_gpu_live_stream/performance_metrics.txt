@@ -1,0 +1,23 @@
+==========================
+Remote TensorRT Inference
+==========================
+
+Image Size      : 384 x 384
+
+Total Frames    : 65
+
+Average FPS     : 0.58
+
+Average Latency : 1913.46 ms
+
+Min Latency     : 1103.46 ms
+
+Max Latency     : 4877.83 ms
+
+Inference Engine: TensorRT
+
+Hardware        : Google Colab T4 GPU
+
+Communication   : FastAPI + ngrok
+
+Client          : Windows Laptop

@@ -1,0 +1,26 @@
+==================================================
+IP Camera -> Remote GPU Inference: Performance Report
+==================================================
+Timestamp: 2026-07-02T17:55:14.433339
+RTSP/Stream URL: http://10.83.59.139:8080/video
+Inference endpoint: https://confess-county-december.ngrok-free.dev/infer
+
+Total runtime: 185.22 s
+Stream end reason: manual exit (ESC)
+
+--- Reconnection Handling ---
+Total reconnects triggered: 0
+Total frame-read failures (before reconnect threshold): 0
+Total failed HTTP requests to GPU server: 0
+
+--- Frames ---
+Frames successfully processed: 58
+Overall throughput: 0.31 frames/sec (session avg)
+
+--- Latency (ms) ---
+round_trip_ms   : avg=3078.3  min=1629.3  max=11358.2
+gpu_only_ms     : avg=200.6  min=51.3  max=422.4
+network_overhead_ms: avg=2877.7  min=1355.9  max=11306.3
+
+--- FPS ---
+avg_fps (per-request): avg=0.40  min=0.09  max=0.61
