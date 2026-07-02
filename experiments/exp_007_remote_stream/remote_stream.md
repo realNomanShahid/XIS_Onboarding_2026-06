@@ -10,34 +10,15 @@ from Day 8.
 ## What Was Built
 
 **Client (Windows laptop)**
-- Connects to a phone-based IP camera stream (`IP Camera Viewer` app) via
-  `cv2.VideoCapture`, forced to TCP transport for reliability over Wi-Fi.
-- Sends each captured frame to the remote GPU inference server (TensorRT
-  model running on Colab, exposed via ngrok) over HTTP.
-- Displays the annotated result (bounding boxes + per-class colored masks)
-  live in an OpenCV window.
+- Connects to a phone IP camera stream using cv2.VideoCapture (TCP for stability over Wi-Fi)
+- Sends frames to a remote GPU inference server (TensorRT on Colab via ngrok) over RTSP
+- isplays real-time results with bounding boxes and colored segmentation masks in an OpenCV window
 
 **Reconnection handling**
-- Tracks consecutive failed frame reads; after 30 failures in a row, the
-  stream is released and reopened.
-- Also reconnects immediately if `cap.isOpened()` reports the stream is down.
-- If no successful frame arrives for 30 seconds straight, the pipeline treats
-  the stream as dead and exits (rather than retrying forever).
+- Tracks consecutive frame read failures and reconnects after 30 failed reads
+- Reopens stream if cap.isOpened() returns false
+- Reopens stream if cap.isOpened() returns false
 
-**Performance logging**
-- Every frame's round-trip time, GPU-only inference time (from the server's
-  `X-Latency-ms` header), and network overhead (round-trip minus GPU time)
-  are recorded.
-- On exit (ESC, Ctrl+C, or stream timeout), a summary report is written to
-  `performance_metrics.txt`: total runtime, reconnect count, failure counts,
-  frame throughput, and min/avg/max for latency and FPS.
-
-**Server (Colab, unchanged from Day 8)**
-- TensorRT engine served via FastAPI, with a dedicated worker thread owning
-  the CUDA context to avoid cross-thread CUDA errors.
-- No server-side changes were needed for Day 9 — reconnection is purely a
-  client-side concern, since the server only ever sees individual JPEG
-  frames over RTSP, not the camera stream itself.
 
 ## Results
 
@@ -55,15 +36,19 @@ from Day 8.
 
 ## Comparison vs Industrial Camera (Day 8)
 
-The GPU-only inference time (~50-420ms) is consistent with Day 8, confirming
-the model and server are unaffected by the camera source. The bottleneck is
-entirely network overhead (~2.9s avg, spiking to 11.3s) — this comes from the
-IP camera's own HTTP/MJPEG streaming latency plus the ngrok free-tier tunnel,
-not from the inference pipeline itself. This matches the expected outcome for
-Day 9: **IP cameras are cheaper and easier to deploy, but trade off
-significantly higher and less predictable latency compared to a direct
-industrial camera + local GPU setup.**
-
-No stream drops or reconnects occurred during this run, so reconnection logic
-is implemented and tested for correctness (via induced failures during
-development) but wasn't exercised in this particular benchmark session.
+GPU inference time is consistent at ~50–420 ms, same as Day 8
+This confirms the model and server are working normally
+The camera source is not affecting inference performance
+Main delay comes from network overhead (~2.9 s average, up to 11.3 s spikes)
+Latency is caused by:
+IP camera HTTP/MJPEG streaming delay
+ngrok free-tier tunnel limitations
+The inference pipeline itself is not the bottleneck
+Conclusion (Day 9):
+IP cameras are cheaper and easier to deploy
+But they have much higher and less stable latency
+Compared to a direct industrial camera + local GPU setup
+System stability:
+No stream drops or reconnects occurred during testing
+Reconnection logic is implemented and verified (tested earlier via forced failures)
+It was not triggered during this benchmark run

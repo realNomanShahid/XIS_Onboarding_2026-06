@@ -70,3 +70,15 @@ Results:
 
 output
 Overall speedup from CPU to TensorRT: ~33.6×.
+
+
+Day 10
+
+Task: IP Camera Streaming into GPU Inference Pipeline
+Replaced industrial camera with phone-based IP camera stream (HTTP/RTSP via IP Camera Viewer app). Built frame-grabbing client with automatic reconnection handling (consecutive-failure detection, stream timeout, auto-reopen). Sent frames to remote TensorRT GPU inference server (Colab, via ngrok) over HTTP. Logged round-trip latency, GPU-only latency, network overhead, and FPS to performance_metrics.txt.
+Results:
+
+GPU-only latency (avg): 200.6 ms
+Network overhead (avg): 2877.7 ms
+Round-trip latency (avg): 3078.3 ms
+Avg FPS: 0.40
